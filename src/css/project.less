@@ -1,0 +1,162 @@
+header{
+  opacity:1;
+
+  .link{
+    padding-left:0;
+    font-size:16px;
+  }
+  .specialhead-top{
+    font-size:14px;
+    color:#333;
+  }
+}
+.header {
+  text-align: center;
+  margin-top:3em;
+  margin-bottom: 2em;
+  padding: 0 10px;
+
+  span {
+    font-family: Sanchez;
+    color: red;
+    letter-spacing: 1px;
+    font-size: 16px;
+
+    @media @mobile{ 
+      font-size:12px;
+    }
+	}
+
+	h1{
+		font-size: 40px;
+    line-height: 1.2;
+    margin: -8px 0 0;
+    font-family: Georgia, serif;
+    font-weight: 200;
+
+    @media @mobile{ 
+      font-size:30px;
+    }
+	}
+
+	.deck {
+    max-width: 550px;
+    margin: 1em auto;
+    font-size: 17px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1em;
+    text-align:left;
+   }
+
+   .updated{
+   font-size: 12px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-family: hackman-bold;
+   }
+}
+
+.author{
+	margin:5px 0 10px;
+}
+
+
+#persons{
+  
+  .date{
+    font-family:@block-graphics;
+    color:@redlinks;
+    text-align:left;
+    margin:0;
+    font-size:12px;
+    text-transform:uppercase;
+  }
+
+  .name{
+    font-family:@block-graphics;
+  }
+
+  .role{
+    font-size:14px;
+    font-family:@med-graphics;
+    margin-bottom:10px;
+  }
+
+  .text{
+    font-size:17px;
+  }
+}
+
+.person{
+	
+	.display-flex;
+	.flex-wrap(wrap);
+  .align-items(center);
+	.justify-content(space-around);
+	max-width:800px;
+	margin:10em auto;
+
+  @media @mobile{
+    .flex-direction(column);
+    margin:5em auto;
+  }
+}
+
+progress {
+  /* Positioning */
+  position: fixed;
+  left: 0;
+  top: 37px;
+  z-index:100;
+
+  /* Dimensions */
+  width: 100%;
+  height: .25em;
+
+  /* Reset the apperance */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  /* Get rid of the default border in Firefox/Opera. */
+  border: none;
+
+  /* For Firefox/IE10+ */
+  background-color: transparent;
+
+  /* For IE10+, color of the progress bar */
+  color: @redlinks;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+  background-color: @redlinks;
+}
+
+progress::-moz-progress-bar {
+  background-color: @redlinks;
+}
+
+
+.image{
+	.flex(0 0 50%);
+	max-width:200px;
+	img{width:100%}
+
+  @media @mobile{
+    .flex(0 0 100%);
+  }
+}
+
+.info{
+	.flex(0 0 50%);
+
+  @media @mobile{
+    padding: 0 20px;
+    .flex(0 0 100%);
+    width:100%;
+  }
+}

@@ -1,0 +1,50 @@
+<%= t.include("partials/_head.html") %>
+<% var data = json.ex_trump_administration_list %>
+
+  
+
+<progress value="0" max="96.5"></progress>
+  <div class="container">
+
+  	<div class="header">
+        <span>White House Chaos</span>
+        <h1><%= data.headline%></h1>
+        <div class="author">By <a href="mailto:jblanchard@sfchronicle.com"> John Blanchard</a> and <a href="mailto:lkazakoff@sfchronicle.com"> Lois Kazakoff</a><div class="updated">UPDATED <%= data.updated%></div></div>
+
+        <div class="deck"><% data.deck.forEach(function(p){%><p><%=p.value%></p><%});	%></div>
+      </div>
+        
+      </div>
+
+  	<div id="persons">
+	  	
+	  	<% json.ex_trump_administration_list.persons.forEach(function(d) { %>
+		  <div class="person">
+		  	<div class="image">
+		  		<img  class="lazyload" src="./assets/<%= d.Img%>.jpg" data-src="./assets/<%= d.Img%>.gif">
+		  	</div>
+		  	<div class="info">
+			  	<div class="date"><%= d.Left%></div>
+			  	<div class="name"><%= d.Name%></div>
+			  	<div class="role"><%= d.Role%></div>
+			  	<div class="text"><%= d.Text%></div>
+			  </div>
+			 </div>
+			<%});%>
+
+		</div>
+  </div>
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="app.js" async></script>  
+<%= t.include("partials/_footer.html") %>
