@@ -16,5 +16,8 @@
   "production": false,
   "embedded": false,
   "paywall":"meter",
-  "paywall_meta": 1
+  "paywall_meta": 1,
+  "time": "06:00:00Z",
+  "date_modifed": "2018-11-07",
+  "time_modified": "02:35:00Z"
 }
